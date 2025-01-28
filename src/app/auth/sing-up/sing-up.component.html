@@ -1,0 +1,26 @@
+<div class="body">
+  <div class="form">
+    <!-- Close Button -->
+    <button class="close-button" (click)="navigateToHome()">×</button>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="head">
+        <span>Sign up</span>
+        <p>Create a free account with your email.</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="Full Name" formControlName="name" />
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+      <!-- Submit Button -->
+      <button type="submit">Sign up</button>
+    </form>
+    <div class="form-footer">
+      <p>Already have an account? <a routerLink="/auth/signin">Log in</a></p>
+    </div>
+  </div>
+</div>

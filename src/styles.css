@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global Typography Settings */
+body {
+  font-family: "Arial", sans-serif; /* Use a clean and modern font */
+  background-color: #ffffff;
+  font-size: 16px; /* Base font size */
+  color: #2c3e50; /* Dark, modern text color */
+  line-height: 1.6; /* Enhance readability */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600; /* Consistent font weight for headings */
+  color: #2c3e50; /* Heading color */
+  margin: 0; /* Remove default margins for control */
+}
+
+p,
+li,
+span {
+  font-size: 1rem; /* Set default font size for text elements */
+  color: #555; /* Lighter gray for body text */
+}
+
+button {
+  font-family: "Arial", sans-serif; /* Ensure buttons match the rest of the site */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Adjust Heading Sizes */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}

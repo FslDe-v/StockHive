@@ -1,0 +1,141 @@
+/* Main Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute; /* Center the form */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it appears above the background */
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+form .head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form .head span {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: black;
+}
+
+form .head p {
+  font-size: 1.1rem;
+  color: #7c6666;
+}
+
+/* Input Fields */
+form .inputs {
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  margin: 1rem 0.5rem;
+  border-radius: 8px;
+}
+
+form .inputs input {
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+  font-weight: 200;
+}
+
+/* Submit Button */
+form button {
+  background-color: #4287ef;
+  color: white;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005ce6;
+}
+
+/* Close and Back Button Container */
+.button-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+/* Close Button Styling */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 11;
+}
+
+.close-button:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #888;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+/* Form Footer */
+.form-footer {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form-footer a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color 0.3s ease-in-out;
+}
+
+.form-footer a:hover {
+  color: #005ce6;
+}

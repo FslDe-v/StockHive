@@ -1,0 +1,44 @@
+<div class="stocks-section">
+  <!-- Header with filter and sort buttons -->
+  <div class="stocks-header">
+    <h3>Select and buy stocks</h3>
+    <div class="controls">
+      <button (click)="filterStocks()" class="filter-btn">Filter</button>
+      <button (click)="sortStocks()" class="sort-btn">Sort</button>
+    </div>
+  </div>
+
+  <!-- Scrollable Stocks Container -->
+  <div class="stocks-container">
+    <div
+      class="stock-card"
+      *ngFor="let stock of stockData"
+      [class.bought]="stock.bought"
+    >
+      <div class="stock-content">
+        <div class="stock-details">
+          <h4>{{ stock.meta.symbol }}</h4>
+          <p>{{ stock.meta.exchange }}</p>
+          <p>Price: {{ stock.values[0]?.close | currency }}</p>
+        </div>
+      </div>
+      <div class="stock-actions">
+        <button
+          (click)="toggleBuyStock(stock)"
+          class="buy-btn"
+          [disabled]="stock.bought"
+        >
+          {{ stock.bought ? "Bought" : "Buy" }}
+        </button>
+        <button (click)="showMoreInfo(stock)" class="info-btn">
+          More Info
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback for empty data -->
+  <div *ngIf="!stockData || stockData.length === 0" class="no-data">
+    <p>No stocks available. Please try again later.</p>
+  </div>
+</div>

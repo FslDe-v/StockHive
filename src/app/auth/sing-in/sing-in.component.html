@@ -1,0 +1,25 @@
+<div class="body">
+  <div class="form">
+    <!-- Return Back Button -->
+    <button class="back-button" (click)="navigateToSignUp()">←</button>
+
+    <!-- Close Button -->
+    <button class="close-button" (click)="navigateToHome()">×</button>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="head">
+        <span>Sign in</span>
+        <p>Log in to your account.</p>
+      </div>
+      <div class="inputs">
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+      <button>Sign in</button>
+    </form>
+  </div>
+</div>

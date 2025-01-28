@@ -1,0 +1,88 @@
+header {
+  text-align: center;
+  margin: -4rem auto;
+}
+
+header img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+h1 {
+  font-family: "Arial", sans-serif; /* Use a clean and professional font */
+  font-size: 1rem; /* Adjust the size to make it prominent */
+  text-align: center; /* Center the text */
+  color: #2c3e50; /* A modern dark color */
+  margin: -50px 0; /* Add space around the heading */
+  line-height: 1.4; /* Improve readability */
+  letter-spacing: 1px; /* Add slight spacing for a refined look */
+  font-weight: 600; /* Slightly bold */
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Adjust size for mobile devices */
+    margin: 15px 0;
+  }
+}
+.main_div {
+  position: absolute; /* Position it relative to the header */
+  top: 60px; /* Adjust distance from the top */
+  right: 40px; /* Adjust distance from the right */
+  z-index: 1;
+}
+
+.main_div button {
+  padding: 0.7em 2em;
+  font-size: 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Smoothly rounded edges */
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.main_div button:hover {
+  background: #333333; /* Slightly lighter background on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Center the form on the page */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute; /* Absolute positioning for centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the form */
+  z-index: 10; /* Ensure it appears above the blurred background */
+}
+
+/* Add a blurred background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 5; /* Make sure it's below the form */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .form {
+    max-width: 300px;
+    padding: 15px;
+  }
+}

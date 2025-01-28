@@ -1,0 +1,48 @@
+<div class="wallet-header">
+  <div class="greeting">
+    <span class="greeting-icon">👋</span>
+    <span class="greeting-text">
+      Welcome back, <strong>{{ userName }}</strong
+      >!
+    </span>
+  </div>
+  <div class="summary-text">Here’s an overview of your portfolio.</div>
+</div>
+
+<div class="wallet-summary">
+  <div class="card wallet">
+    <div class="icon-placeholder">💰</div>
+    <h3>Wallet Balance</h3>
+    <p>${{ walletBalance }}</p>
+  </div>
+  <div class="card benefits">
+    <div class="icon-placeholder">📈</div>
+    <h3>Benefits</h3>
+    <p>${{ benefits }}</p>
+  </div>
+  <div class="card losses">
+    <div class="icon-placeholder">📉</div>
+    <h3>Losses</h3>
+    <p>${{ losses }}</p>
+  </div>
+</div>
+
+<div class="last-stocks">
+  <h3>Last Bought Stocks</h3>
+  <div class="stock-container">
+    <div class="stock-card" *ngFor="let stock of lastPaidStocks">
+      <div class="stock-left">
+        <div>
+          <h4>{{ stock.meta.symbol }}</h4>
+          <p>Price: ${{ stock.values[0]?.close }}</p>
+          <p>Exchange: {{ stock.meta.exchange }}</p>
+        </div>
+      </div>
+      <div class="stock-right">
+        <button (click)="viewMoreInfo(stock)" class="view-info-btn">
+          More Info
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

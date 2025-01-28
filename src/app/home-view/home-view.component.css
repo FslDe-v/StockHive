@@ -1,0 +1,13 @@
+.home-view {
+  display: flex;
+  height: calc(100vh - 80px); /* Account for header height */
+  margin-top: 150px; /* Space below the fixed header */
+}
+
+.home-view app-wallet-summary {
+  flex: 1.2; /* Left component takes half the width */
+}
+
+.home-view app-stocks {
+  flex: 0.8;
+}
