@@ -43,15 +43,6 @@
   transform: scale(1.05);
 }
 
-/* Stocks Container */
-.stocks-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
 /* Individual Stock Card */
 .stock-card {
   display: flex;
@@ -71,15 +62,6 @@
 
 .stock-card.bought {
   background-color: #e6ffee; /* Light green for bought stocks */
-}
-
-/* Stocks Section */
-.stocks-section {
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Stocks Header */
@@ -161,27 +143,33 @@
   font-size: 0.9rem;
   color: #555;
 }
-
-/* Stock Actions (Buttons) */
 .stock-actions {
   display: flex;
-  gap: 10px; /* Add spacing between buttons */
+  gap: 15px; /* ✅ Adjust spacing between buttons */
 }
 
 .buy-btn {
-  background-color: #28a745;
+  background-color: #28a745; /* Green for Buy */
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
   border-radius: 6px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-.buy-btn[disabled] {
-  background-color: #ced4da;
-  cursor: not-allowed;
+.buy-btn:hover {
+  background-color: #218838;
+}
+
+.bought-btn {
+  background-color: #dc3545 !important; /* Red for Sell */
+}
+
+.bought-btn:hover {
+  background-color: #c82333 !important;
 }
 
 .info-btn {

@@ -20,6 +20,9 @@ export interface StockData {
   meta: StockMeta;
   values: StockValue[];
   status: string;
+  marketCap?: string;
+  dayRange?: string;
+  weekRange?: string;
 }
 
 export interface StocksResponse {

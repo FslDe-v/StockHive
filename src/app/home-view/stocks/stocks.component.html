@@ -26,9 +26,9 @@
         <button
           (click)="toggleBuyStock(stock)"
           class="buy-btn"
-          [disabled]="stock.bought"
+          [ngClass]="{ 'bought-btn': stock.bought }"
         >
-          {{ stock.bought ? "Bought" : "Buy" }}
+          {{ stock.bought ? "Sell" : "Buy" }}
         </button>
         <button (click)="showMoreInfo(stock)" class="info-btn">
           More Info

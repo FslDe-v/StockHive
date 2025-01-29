@@ -33,6 +33,10 @@
   font-size: 0.9rem; /* Smaller and subtle secondary text */
   color: #555; /* Lighter gray for less emphasis */
 }
+.summary-text {
+  font-size: 0.9rem; /* Smaller and subtle secondary text */
+  color: #555; /* Lighter gray for less emphasis */
+}
 
 /* Wallet Summary Section */
 .wallet-summary {
