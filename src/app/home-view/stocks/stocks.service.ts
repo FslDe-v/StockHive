@@ -14,18 +14,17 @@ export class StocksService {
 
   constructor(private http: HttpClient) {}
 
-  // Icon map for stock symbols
-  private stockIcons: { [key: string]: string } = {
-    AAPL: 'apple.png',
-    GOOGL: 'google.png',
-    TSLA: 'tesla.png',
-    MSFT: 'microsoft.png', // Microsoft
-    AMZN: 'amazon.png', // Amazon
-    FB: 'meta.png', // Facebook (Meta)
-    NVDA: 'nvidia.png', // Nvidia
-    JNJ: 'johnson.png', // Johnson & Johnson
-    V: 'visa.png', // Visa
-  };
+  // private stockIcons: { [key: string]: string } = {
+  //   AAPL: 'apple.png',
+  //   GOOGL: 'google.png',
+  //   TSLA: 'tesla.png',
+  //   MSFT: 'microsoft.png',
+  //   AMZN: 'amazon.png',
+  //   FB: 'meta.png',
+  //   NVDA: 'nvidia.png',
+  //   JNJ: 'johnson.png',
+  //   V: 'visa.png',
+  // };
 
   getTimeSeries(symbols: string, interval: string) {
     const url = `${this.baseUrl}/time_series?symbol=${symbols}&interval=${interval}&apikey=${this.apiKey}`;
@@ -46,7 +45,7 @@ export class StocksService {
               status: stockData.status,
             };
           })
-          .filter((stock) => stock !== null); // Filter out null values
+          .filter((stock) => stock !== null);
       }),
       catchError((error) => {
         console.error('Error fetching stocks:', error);

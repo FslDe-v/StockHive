@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between; /* Align left and right sections */
   width: 100%;
-  max-width: 1500px; /* Keep layout consistent */
+  max-width: 1800px;
 }
 
 /* Wallet Summary & Graph (Left Side) */
@@ -27,7 +27,7 @@
   flex: 0.9;
   margin-top: 100px;
   width: 100%;
-  max-width: 1600px;
+  max-width: 2000px;
 }
 
 /* Ensure the stocks container aligns properly */
@@ -91,6 +91,8 @@
 .stock-icon {
   width: 45px;
   height: 45px;
+  position: relative;
+  top: -52px; /* Move the icon up by 10px */
 }
 
 .stock-title h2 {
@@ -153,4 +155,58 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.chart-container {
+  width: 100%;
+  max-width: 650px;
+  height: 350px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stock-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.stock-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detail {
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  text-align: center;
 }

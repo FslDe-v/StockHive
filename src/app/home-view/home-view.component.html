@@ -26,79 +26,51 @@
     <!-- Stock Header -->
     <div class="modal-header">
       <img
-        src="{{ selectedStock?.meta.symbol }}.png"
-        alt="Stock Icon"
+        *ngIf="selectedStock?.meta.symbol"
+        [src]="selectedStock?.meta.symbol + '.png'"
+        alt="{{ selectedStock?.meta.symbol }}"
         class="stock-icon"
       />
       <div class="stock-title">
-        <h2>
-          {{ selectedStock?.meta.symbol }}
-          <span class="company-name">{{ selectedStock?.meta.type }}</span>
-        </h2>
+        <h2>{{ selectedStock?.meta.symbol }}</h2>
+        <span class="company-name">{{ selectedStock?.meta.type }}</span>
         <p class="stock-price">
           {{ selectedStock?.values[0]?.close | currency }}
-          <span class="price-change">
-            {{ priceChange.value > 0 ? "+" : "" }}{{ priceChange.value }}
-            {{ priceChange.percentage }}%
-          </span>
+          <span class="price-change">+1.73 +1.57%</span>
         </p>
       </div>
     </div>
 
-    <!-- Stock Details Modal -->
-    <div class="modal-overlay" *ngIf="isModalOpen">
-      <div class="modal">
-        <!-- Close Button -->
-        <button class="close-button" (click)="closeModal()">×</button>
-
-        <!-- Stock Header -->
-        <div class="modal-header">
-          <img
-            *ngIf="selectedStock?.meta.symbol"
-            [src]="selectedStock?.meta.symbol + '.png'"
-            alt="{{ selectedStock?.meta.symbol }}"
-            class="stock-icon"
-          />
-          <div class="stock-title">
-            <h2>{{ selectedStock?.meta.symbol }}</h2>
-            <span class="company-name">{{ selectedStock?.meta.type }}</span>
-            <p class="stock-price">
-              {{ selectedStock?.values[0]?.close | currency }}
-              <span class="price-change">+1.73 +1.57%</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- Stock Details Grid -->
-        <div class="stock-details">
-          <div class="detail">
-            <div>Open</div>
-            <strong>{{ selectedStock?.values[0]?.open || "--" }}</strong>
-          </div>
-          <div class="detail">
-            <div>Prev Close</div>
-            <strong>{{ selectedStock?.values[1]?.close || "--" }}</strong>
-          </div>
-          <div class="detail">
-            <div>Volume</div>
-            <strong>{{ selectedStock?.values[0]?.volume || "--" }}</strong>
-          </div>
-          <div class="detail">
-            <div>Market Cap</div>
-            <strong>{{ selectedStock?.marketCap || "N/A" }}</strong>
-          </div>
-          <div class="detail">
-            <div>Day Range</div>
-            <strong>{{ selectedStock?.dayRange || "N/A" }}</strong>
-          </div>
-          <div class="detail">
-            <div>52 Week Range</div>
-            <strong>{{ selectedStock?.weekRange || "N/A" }}</strong>
-          </div>
-        </div>
-
-        <!-- Trend Line Placeholder -->
+    <!-- Stock Details Grid -->
+    <div class="stock-details">
+      <div class="detail">
+        <div>Open</div>
+        <strong>{{ selectedStock?.values[0]?.open || "--" }}</strong>
       </div>
+      <div class="detail">
+        <div>Prev Close</div>
+        <strong>{{ selectedStock?.values[1]?.close || "--" }}</strong>
+      </div>
+      <div class="detail">
+        <div>Volume</div>
+        <strong>{{ selectedStock?.values[0]?.volume || "--" }}</strong>
+      </div>
+      <div class="detail">
+        <div>Market Cap</div>
+        <strong>{{ selectedStock?.marketCap || "N/A" }}</strong>
+      </div>
+      <div class="detail">
+        <div>Day Range</div>
+        <strong>{{ selectedStock?.dayRange || "N/A" }}</strong>
+      </div>
+      <div class="detail">
+        <div>52 Week Range</div>
+        <strong>{{ selectedStock?.weekRange || "N/A" }}</strong>
+      </div>
+    </div>
+    <!-- Stock Chart Section -->
+    <div class="chart-container">
+      <canvas #stockChart></canvas>
     </div>
   </div>
 </div>

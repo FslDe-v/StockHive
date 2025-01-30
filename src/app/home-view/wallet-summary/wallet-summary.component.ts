@@ -22,9 +22,9 @@ export class WalletSummaryComponent implements OnInit {
   chart!: Chart;
 
   userName: string | undefined = this.userService.user()?.name;
-  walletBalance: number = 10000;
-  benefits: number = 2000;
-  losses: number = 500;
+  walletBalance: number = Math.floor(Math.random() * (20000 - 2000 + 1)) + 2000;
+  benefits: number = Math.floor(Math.random() * (10000 - 10 + 1)) + 2000;
+  losses: number = Math.floor(Math.random() * (10000 - 10 + 1)) + 2000;
 
   ngOnInit(): void {
     if (!this.userService.user()) this.router.navigate(['']);
@@ -39,15 +39,15 @@ export class WalletSummaryComponent implements OnInit {
 
   createChart() {
     this.chart = new Chart(this.chartRef.nativeElement, {
-      type: 'line', // Can be 'bar', 'pie', etc.
+      type: 'line',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
           {
             label: 'Wallet Balance Over Time',
-            data: [8000, 8500, 8700, 9200, 9700, 10000], // Sample data
-            borderColor: '#007bff', // Bootstrap primary color
-            backgroundColor: 'rgba(0, 123, 255, 0.2)', // Transparent fill
+            data: [8000, 8500, 8700, 9200, 9700, this.walletBalance],
+            borderColor: '#007bff',
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
             borderWidth: 2,
             fill: true,
           },

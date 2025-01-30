@@ -82,23 +82,22 @@ form button:hover {
   background-color: #005ce6;
 }
 
-/* Close Button */
 .close-button {
   position: absolute;
-  top: 10px; /* Adjust positioning */
-  right: 10px; /* Adjust positioning */
+  top: 10px; 
+  right: 10px; 
   background: none;
   border: none;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #888; /* Neutral color */
+  color: #888; 
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 11; /* Ensure it appears above the form */
+  z-index: 11; 
 }
 
 .close-button:hover {
-  color: #000; /* Change color on hover */
+  color: #000; 
 }
 .form-footer {
   background-color: #fff;

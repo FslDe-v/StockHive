@@ -14,7 +14,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1.2rem; /* Slightly larger font for emphasis */
+  font-size: 1.2rem;
+  margin-left: -85px;
 }
 
 .greeting-icon {
@@ -26,16 +27,13 @@
 }
 
 .greeting-text strong {
-  color: #007bff; /* Highlighted username in blue */
+  color: #007bff;
 }
 
 .summary-text {
-  font-size: 0.9rem; /* Smaller and subtle secondary text */
-  color: #555; /* Lighter gray for less emphasis */
-}
-.summary-text {
-  font-size: 0.9rem; /* Smaller and subtle secondary text */
-  color: #555; /* Lighter gray for less emphasis */
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: -85px;
 }
 
 /* Wallet Summary Section */
@@ -69,61 +67,57 @@
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Lift on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
   font-size: 1.2rem;
-  color: #343a40; /* Modern dark text color */
+  color: #343a40;
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #343a40; /* Consistent dark text color */
+  color: #343a40;
 }
 
 .card .icon-placeholder {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #343a40; /* Neutral modern icon color */
+  color: #343a40;
 }
 
-/* Gradient for Wallet Balance */
 .card.wallet {
   background: linear-gradient(
     to right,
     rgba(0, 123, 255, 0.15),
     rgba(0, 86, 179, 0.15)
-  ); /* Transparent blue gradient */
+  );
 }
 
-/* Gradient for Benefits */
 .card.benefits {
   background: linear-gradient(
     to right,
     rgba(40, 167, 69, 0.15),
     rgba(21, 87, 36, 0.15)
-  ); /* Transparent green gradient */
+  );
 }
 
-/* Gradient for Losses */
 .card.losses {
   background: linear-gradient(
     to right,
     rgba(220, 53, 69, 0.15),
     rgba(114, 28, 36, 0.15)
-  ); /* Transparent red gradient */
+  );
 }
 
-/* Last Paid Stocks Section */
 .last-stocks {
   margin: 40px auto;
   padding: 0 10%;
@@ -137,31 +131,28 @@
   margin-bottom: 20px;
 }
 
-/* Stock Container */
 .stock-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Individual Stock Card */
 .stock-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9; /* Light modern background */
+  background-color: #f9f9f9;
   padding: 15px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .stock-card:hover {
-  transform: translateY(-3px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Left Section: Icon and Text */
 .stock-left {
   display: flex;
   align-items: center;
