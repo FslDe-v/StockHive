@@ -26,23 +26,11 @@
     <p>${{ losses }}</p>
   </div>
 </div>
+<div class="wallet-summary card shadow-sm p-3">
+  <div class="row"></div>
 
-<div class="last-stocks">
-  <h3>Last Bought Stocks</h3>
-  <div class="stock-container">
-    <div class="stock-card" *ngFor="let stock of lastPaidStocks">
-      <div class="stock-left">
-        <div>
-          <h4>{{ stock.meta.symbol }}</h4>
-          <p>Price: ${{ stock.values[0]?.close }}</p>
-          <p>Exchange: {{ stock.meta.exchange }}</p>
-        </div>
-      </div>
-      <div class="stock-right">
-        <button (click)="viewMoreInfo(stock)" class="view-info-btn">
-          More Info
-        </button>
-      </div>
-    </div>
+  <!-- Graph Section -->
+  <div class="chart-container mt-4">
+    <canvas #walletChart></canvas>
   </div>
 </div>

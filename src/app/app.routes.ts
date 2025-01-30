@@ -6,7 +6,7 @@ import { SingInComponent } from './auth/sing-in/sing-in.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 
 export const routes: Routes = [
-  { path: '', component: FirstPageComponent }, // Route for the AuthComponent
+  { path: '', component: FirstPageComponent },
   { path: 'home', component: HomeViewComponent },
   {
     path: 'auth',
@@ -16,4 +16,5 @@ export const routes: Routes = [
       { path: 'signin', component: SingInComponent },
     ],
   },
+  { path: '**', redirectTo: '' },
 ];

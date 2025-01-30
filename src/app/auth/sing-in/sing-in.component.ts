@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -6,23 +6,27 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../../user/user.service';
 
 @Component({
-  selector: 'app-sing-in',
+  selector: 'app-sign-in',
   imports: [ReactiveFormsModule],
   templateUrl: './sing-in.component.html',
   styleUrl: './sing-in.component.css',
 })
-export class SingInComponent {
-  constructor(private router: Router) {}
+export class SignInComponent {
+  private router = inject(Router);
+  private userService = inject(UserService);
+
   navigateToSignUp() {
-    this.router.navigate(['/auth/signup']); // Navigate to sign-up page
-  }
-  navigateToHome() {
-    this.router.navigate(['']);
+    console.log(this.userService.isLoggedIn());
+    this.router.navigate(['/auth/signup']);
   }
 
-  private destroyRef = inject(DestroyRef);
+  navigateToHome() {
+    console.log(this.userService.isLoggedIn());
+    this.router.navigate(['/home']);
+  }
 
   form = new FormGroup({
     email: new FormControl('', {
@@ -37,10 +41,9 @@ export class SingInComponent {
     if (this.form.valid) {
       console.log('Form Submitted:', this.form.value);
       const { email, password } = this.form.value;
-      console.log(email, password);
-
-      // Navigate or handle success
-      this.router.navigate(['']); // Example route
+      this.userService.login();
+      console.log(this.userService.isLoggedIn());
+      this.router.navigate(['/home']);
     } else {
       console.error('Form is invalid.');
     }

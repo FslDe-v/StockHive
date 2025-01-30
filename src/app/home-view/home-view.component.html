@@ -1,9 +1,22 @@
 <app-header></app-header>
 
 <div class="home-view">
-  <app-wallet-summary></app-wallet-summary>
-  <app-stocks (stockSelected)="openModal($event)"></app-stocks>
+  <div class="home-content">
+    <!-- Wallet & Graph Section -->
+    <div class="wallet-graph-container">
+      <app-wallet-summary></app-wallet-summary>
+      <div class="chart-container">
+        <canvas #walletChart></canvas>
+      </div>
+    </div>
+
+    <!-- Stocks Section -->
+    <div class="stocks-container">
+      <app-stocks (stockSelected)="openModal($event)"></app-stocks>
+    </div>
+  </div>
 </div>
+
 <!-- Stock Details Modal -->
 <div class="modal-overlay" *ngIf="isModalOpen">
   <div class="modal">

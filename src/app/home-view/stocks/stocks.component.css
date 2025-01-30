@@ -7,12 +7,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Stocks Header */
 .stocks-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding-bottom: 10px; /* ✅ Adds space below the header */
+  border-bottom: 2px solid #eee; /* Optional: Adds a subtle separator */
 }
 
 .stocks-header h3 {
@@ -21,10 +22,10 @@
   color: #2c3e50;
 }
 
-/* Filter and Sort Buttons */
 .controls {
   display: flex;
-  gap: 10px;
+  gap: 200px; /* ✅ Increase gap between buttons and title */
+  margin-left: 200px; /* ✅ Push buttons slightly to the right */
 }
 
 .controls button {

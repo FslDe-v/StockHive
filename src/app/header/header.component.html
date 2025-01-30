@@ -4,6 +4,11 @@
     <h1>Track your portfolio and invest smarter—all in one place.</h1>
   </div>
   <div class="main_div">
-    <button (click)="navigateToAuth()">Sign up</button>
+    <button *ngIf="!isLoggedIn()" (click)="navigateToAuth()" class="signup-btn">
+      Sign Up
+    </button>
+    <button *ngIf="isLoggedIn()" (click)="logout()" class="logout-btn">
+      Logout
+    </button>
   </div>
 </header>

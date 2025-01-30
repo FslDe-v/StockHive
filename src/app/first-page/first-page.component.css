@@ -1,0 +1,27 @@
+.first-page-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.auth-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.signup-btn,
+.signin-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.signup-btn:hover,
+.signin-btn:hover {
+  background-color: #0056b3;
+}

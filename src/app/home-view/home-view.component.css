@@ -1,15 +1,40 @@
 .home-view {
   display: flex;
-  height: calc(100vh - 80px); /* Account for header height */
-  margin-top: 150px; /* Space below the fixed header */
+  flex-direction: column; /* Stack elements */
+  align-items: center; /* Center align */
+  margin-top: 100px; /* Reduce top margin */
+  gap: 100px; /* Add spacing between sections */
 }
 
-.home-view app-wallet-summary {
-  flex: 1.2; /* Left component takes half the width */
+/* Wallet & Graph Section */
+.home-content {
+  display: flex;
+  justify-content: space-between; /* Align left and right sections */
+  width: 100%;
+  max-width: 1500px; /* Keep layout consistent */
 }
 
+/* Wallet Summary & Graph (Left Side) */
+.wallet-graph-container {
+  flex: 1.1; /* Take more space */
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* Stocks Section (Right Side) */
+.stocks-container {
+  flex: 0.9;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+/* Ensure the stocks container aligns properly */
 .home-view app-stocks {
-  flex: 0.8;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -55px;
 }
 
 /* Blur background when modal is open */
