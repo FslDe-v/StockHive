@@ -10,11 +10,19 @@
       <div class="inputs">
         <input type="text" placeholder="Full Name" formControlName="name" />
         <input type="email" placeholder="Email" formControlName="email" />
+        @if(emailIsInvalid && !emailAlreadyTaken){
+        <p class="control-error">Please enter a valid email address.</p>
+        } @if(emailAlreadyTaken){
+        <p class="control-error">This email is already in use.</p>
+        }
         <input
           type="password"
           placeholder="Password"
           formControlName="password"
         />
+        @if(passwordIsInvalid){
+        <p class="control-error">Password must be at least 6 characters.</p>
+        }
       </div>
       <!-- Submit Button -->
       <button type="submit">Sign up</button>

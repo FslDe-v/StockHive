@@ -19,6 +19,9 @@
           formControlName="password"
         />
       </div>
+      @if(credentialsInvalid){
+      <p class="control-error">Invalid email or password.</p>
+      }
       <button>Sign in</button>
     </form>
   </div>

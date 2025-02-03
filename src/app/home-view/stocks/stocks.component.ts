@@ -13,13 +13,12 @@ export class StocksComponent {
   private stocksService = inject(StocksService);
 
   stocks = this.stocksService.allStocks;
-  stockData: any[] = []; // Store fetched stocks data
+  stockData: any[] = [];
   errorMessage: string = '';
-  // Event emitter to send stock details to the parent component
   @Output() stockSelected = new EventEmitter<any>();
 
   showMoreInfo(stock: any) {
-    this.stockSelected.emit(stock); // Emit selected stock data
+    this.stockSelected.emit(stock);
   }
 
   ngOnInit(): void {
@@ -41,7 +40,7 @@ export class StocksComponent {
   }
 
   toggleBuyStock(stock: any) {
-    stock.bought = !stock.bought; // Toggle the bought status
+    stock.bought = !stock.bought;
     if (stock.bought) {
       alert(`You have bought ${stock.meta.symbol}`);
     } else {
@@ -50,14 +49,12 @@ export class StocksComponent {
   }
 
   filterStocks() {
-    // Example: Filter stocks based on exchange
     this.stockData = this.stockData.filter(
       (stock: any) => stock.meta.exchange === 'NASDAQ'
     );
   }
 
   sortStocks() {
-    // Example: Sort stocks by price
     this.stockData = this.stockData.sort(
       (a: any, b: any) =>
         parseFloat(a.values[0]?.close) - parseFloat(b.values[0]?.close)
