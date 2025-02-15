@@ -1,59 +1,75 @@
-# StockApp
+📈 StockHive - Track & Invest Smarter
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+🌐 Live Website
 
-## Development server
+StockHive - Live Demo
 
-To start a local development server, run:
+📌 About StockHive
 
-```bash
-ng serve
-```
+StockHive is a modern stock tracking and portfolio management web application built using Angular. The platform enables users to monitor stock prices, track their wallet balance, and make simulated investments in real-time.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🚀 Features
 
-## Code scaffolding
+✅ User Authentication
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Sign up & log in functionality
 
-```bash
-ng generate component component-name
-```
+Firebase authentication for secure access
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Logout option
 
-```bash
-ng generate --help
-```
+✅ Stock Tracking & Investment
 
-## Building
+View real-time stock data from various exchanges
 
-To build the project run:
+Buy and sell stocks with simulated transactions
 
-```bash
-ng build
-```
+Filter and sort stocks efficiently
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+View detailed stock information in a modern modal
 
-## Running unit tests
+✅ Portfolio & Wallet Management
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Track wallet balance, benefits, and losses
 
-```bash
-ng test
-```
+View a graphical representation of wallet balance over time
 
-## Running end-to-end tests
+Responsive design for desktop, tablet, and mobile
 
-For end-to-end (e2e) testing, run:
+✅ Firebase Deployment
 
-```bash
-ng e2e
-```
+Hosted on Firebase with a live URL
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Continuous updates and improvements
 
-## Additional Resources
+🎯 What I Have Learned
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Working on StockHive helped me gain hands-on experience with:
+
+🛠 Frontend Development
+
+Angular Framework (Components, Services, Routing, Directives)
+
+Bootstrap & CSS for responsive UI
+
+TypeScript & RxJS for managing data & API calls
+
+🔥 Backend & Database
+
+Firebase Authentication for user login/signup
+
+Firebase Hosting for deploying the application
+
+Managing real-time data with Firestore (future upgrade)
+
+📊 Data Visualization
+
+Chart.js for rendering dynamic stock market graphs
+
+Displaying financial data in a structured & readable format
+
+🌍 Deployment & Hosting
+
+Firebase Hosting for production-ready deployment
+
+Debugging deployment issues and fixing configuration settings
