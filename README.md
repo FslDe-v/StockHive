@@ -1,6 +1,6 @@
 📈 StockHive - Track & Invest Smarter
 
-🌐 Live Website
+🌐 Live Website: https://angular-stockhive.web.app/
 
 StockHive - Live Demo
 
