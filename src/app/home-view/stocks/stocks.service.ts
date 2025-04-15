@@ -10,7 +10,7 @@ export class StocksService {
   stocks = signal<StockData[]>([]);
   allStocks = this.stocks.asReadonly();
   private baseUrl = 'https://api.twelvedata.com';
-  private apiKey = '54054e81c1d547f8aa9dcbe4809b7e1b';
+  private apiKey = 'YOUR KEY ;)';
 
   constructor(private http: HttpClient) {}
 
